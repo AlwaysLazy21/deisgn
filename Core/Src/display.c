@@ -87,9 +87,8 @@ void oled_disfunc_temperatureANDhumidity()
         {
             A_count = 0;
             char info[50];
-            sprintf(info, "温度：%.1f度,湿度：%.1f%%", temperature, humidity);
+            sprintf(info, "{\"temperature\": %.1f,\"humidity\": %.2f}", temperature, humidity/100.0);
             HAL_UART_Transmit_DMA(&huart1, (uint8_t *)info, strlen(info));
-            HAL_UART_Transmit_IT(&huart1,(uint8_t *)info, strlen(info));
         }
     }
     OLED_NewFrame();
