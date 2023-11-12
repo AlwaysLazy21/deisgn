@@ -1,0 +1,7 @@
+../Core/Src/display.c:17:6:oled_display_mainPage	8	static
+../Core/Src/display.c:24:6:oled_display_authorInfo	8	static
+../Core/Src/display.c:31:6:oled_display_timer	8	static
+../Core/Src/display.c:38:6:oled_display_curTime	8	static
+../Core/Src/display.c:46:6:oled_disfunc_time	64	static
+../Core/Src/display.c:68:6:oled_disfunc_authorInfo	8	static
+../Core/Src/display.c:75:6:oled_disfunc_temperatureANDhumidity	104	static
