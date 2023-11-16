@@ -33,3 +33,10 @@
 
 > 按键2(PA7): 功能的确定/使用   
 
+## 代码逻辑
+
+<img src="./imgs/运行逻辑.png" width="80%">
+
+<img src="./imgs/中断.png" width="80%">
+
+
