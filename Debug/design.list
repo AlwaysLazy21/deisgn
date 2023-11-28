@@ -1471,10 +1471,10 @@ void oled_disfunc_temperatureANDhumidity()
  8000f3a:	b2da      	uxtb	r2, r3
  8000f3c:	4b33      	ldr	r3, [pc, #204]	; (800100c <oled_disfunc_temperatureANDhumidity+0x100>)
  8000f3e:	701a      	strb	r2, [r3, #0]
-        if (A_count == 5)
+        if (A_count == 10)
  8000f40:	4b32      	ldr	r3, [pc, #200]	; (800100c <oled_disfunc_temperatureANDhumidity+0x100>)
  8000f42:	781b      	ldrb	r3, [r3, #0]
- 8000f44:	2b05      	cmp	r3, #5
+ 8000f44:	2b0a      	cmp	r3, #10
  8000f46:	d124      	bne.n	8000f92 <oled_disfunc_temperatureANDhumidity+0x86>
         {
             A_count = 0;

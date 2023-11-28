@@ -83,7 +83,7 @@ void oled_disfunc_temperatureANDhumidity()
     if (A_isopen)
     {
         A_count++;
-        if (A_count == 5)
+        if (A_count == 10)
         {
             A_count = 0;
             char info[50];
