@@ -2271,9 +2271,9 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 
 080014b4 <main>:
 /**
- * @brief  The application entry point.
- * @retval int
- */
+  * @brief  The application entry point.
+  * @retval int
+  */
 int main(void)
 {
  80014b4:	b580      	push	{r7, lr}
@@ -2464,9 +2464,9 @@ int main(void)
 
 080015e4 <SystemClock_Config>:
 /**
- * @brief System Clock Configuration
- * @retval None
- */
+  * @brief System Clock Configuration
+  * @retval None
+  */
 void SystemClock_Config(void)
 {
  80015e4:	b580      	push	{r7, lr}
@@ -2488,8 +2488,8 @@ void SystemClock_Config(void)
  8001604:	611a      	str	r2, [r3, #16]
 
   /** Initializes the RCC Oscillators according to the specified parameters
-   * in the RCC_OscInitTypeDef structure.
-   */
+  * in the RCC_OscInitTypeDef structure.
+  */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
  8001606:	2301      	movs	r3, #1
  8001608:	61bb      	str	r3, [r7, #24]
@@ -2524,10 +2524,11 @@ void SystemClock_Config(void)
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
-   */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
  800163c:	230f      	movs	r3, #15
  800163e:	607b      	str	r3, [r7, #4]
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
  8001640:	2302      	movs	r3, #2
  8001642:	60bb      	str	r3, [r7, #8]
@@ -2561,9 +2562,9 @@ void SystemClock_Config(void)
 
 0800166e <Error_Handler>:
 /**
- * @brief  This function is executed in case of error occurrence.
- * @retval None
- */
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
 void Error_Handler(void)
 {
  800166e:	b480      	push	{r7}
@@ -3789,8 +3790,8 @@ void HAL_MspInit(void)
 08001e04 <NMI_Handler>:
 /******************************************************************************/
 /**
- * @brief This function handles Non maskable interrupt.
- */
+  * @brief This function handles Non maskable interrupt.
+  */
 void NMI_Handler(void)
 {
  8001e04:	b480      	push	{r7}
@@ -3805,8 +3806,8 @@ void NMI_Handler(void)
 08001e0a <HardFault_Handler>:
 
 /**
- * @brief This function handles Hard fault interrupt.
- */
+  * @brief This function handles Hard fault interrupt.
+  */
 void HardFault_Handler(void)
 {
  8001e0a:	b480      	push	{r7}
@@ -3820,8 +3821,8 @@ void HardFault_Handler(void)
 08001e10 <MemManage_Handler>:
 
 /**
- * @brief This function handles Memory management fault.
- */
+  * @brief This function handles Memory management fault.
+  */
 void MemManage_Handler(void)
 {
  8001e10:	b480      	push	{r7}
@@ -3835,8 +3836,8 @@ void MemManage_Handler(void)
 08001e16 <BusFault_Handler>:
 
 /**
- * @brief This function handles Prefetch fault, memory access fault.
- */
+  * @brief This function handles Prefetch fault, memory access fault.
+  */
 void BusFault_Handler(void)
 {
  8001e16:	b480      	push	{r7}
@@ -3850,8 +3851,8 @@ void BusFault_Handler(void)
 08001e1c <UsageFault_Handler>:
 
 /**
- * @brief This function handles Undefined instruction or illegal state.
- */
+  * @brief This function handles Undefined instruction or illegal state.
+  */
 void UsageFault_Handler(void)
 {
  8001e1c:	b480      	push	{r7}
@@ -3865,8 +3866,8 @@ void UsageFault_Handler(void)
 08001e22 <SVC_Handler>:
 
 /**
- * @brief This function handles System service call via SWI instruction.
- */
+  * @brief This function handles System service call via SWI instruction.
+  */
 void SVC_Handler(void)
 {
  8001e22:	b480      	push	{r7}
@@ -3885,8 +3886,8 @@ void SVC_Handler(void)
 08001e2e <DebugMon_Handler>:
 
 /**
- * @brief This function handles Debug monitor.
- */
+  * @brief This function handles Debug monitor.
+  */
 void DebugMon_Handler(void)
 {
  8001e2e:	b480      	push	{r7}
@@ -3905,8 +3906,8 @@ void DebugMon_Handler(void)
 08001e3a <PendSV_Handler>:
 
 /**
- * @brief This function handles Pendable request for system service.
- */
+  * @brief This function handles Pendable request for system service.
+  */
 void PendSV_Handler(void)
 {
  8001e3a:	b480      	push	{r7}
@@ -3925,8 +3926,8 @@ void PendSV_Handler(void)
 08001e46 <SysTick_Handler>:
 
 /**
- * @brief This function handles System tick timer.
- */
+  * @brief This function handles System tick timer.
+  */
 void SysTick_Handler(void)
 {
  8001e46:	b580      	push	{r7, lr}
@@ -3947,8 +3948,8 @@ void SysTick_Handler(void)
 08001e54 <EXTI4_IRQHandler>:
 
 /**
- * @brief This function handles EXTI line4 interrupt.
- */
+  * @brief This function handles EXTI line4 interrupt.
+  */
 void EXTI4_IRQHandler(void)
 {
  8001e54:	b580      	push	{r7, lr}
@@ -4071,8 +4072,8 @@ void EXTI4_IRQHandler(void)
 08001f08 <DMA1_Channel4_IRQHandler>:
 
 /**
- * @brief This function handles DMA1 channel4 global interrupt.
- */
+  * @brief This function handles DMA1 channel4 global interrupt.
+  */
 void DMA1_Channel4_IRQHandler(void)
 {
  8001f08:	b580      	push	{r7, lr}
@@ -4095,8 +4096,8 @@ void DMA1_Channel4_IRQHandler(void)
 08001f1c <DMA1_Channel5_IRQHandler>:
 
 /**
- * @brief This function handles DMA1 channel5 global interrupt.
- */
+  * @brief This function handles DMA1 channel5 global interrupt.
+  */
 void DMA1_Channel5_IRQHandler(void)
 {
  8001f1c:	b580      	push	{r7, lr}
@@ -4119,8 +4120,8 @@ void DMA1_Channel5_IRQHandler(void)
 08001f30 <EXTI9_5_IRQHandler>:
 
 /**
- * @brief This function handles EXTI line[9:5] interrupts.
- */
+  * @brief This function handles EXTI line[9:5] interrupts.
+  */
 void EXTI9_5_IRQHandler(void)
 {
  8001f30:	b580      	push	{r7, lr}
@@ -4264,8 +4265,8 @@ void EXTI9_5_IRQHandler(void)
 08002000 <TIM2_IRQHandler>:
 
 /**
- * @brief This function handles TIM2 global interrupt.
- */
+  * @brief This function handles TIM2 global interrupt.
+  */
 void TIM2_IRQHandler(void)
 {
  8002000:	b580      	push	{r7, lr}
@@ -4288,8 +4289,8 @@ void TIM2_IRQHandler(void)
 08002014 <TIM3_IRQHandler>:
 
 /**
- * @brief This function handles TIM3 global interrupt.
- */
+  * @brief This function handles TIM3 global interrupt.
+  */
 void TIM3_IRQHandler(void)
 {
  8002014:	b580      	push	{r7, lr}
@@ -4312,8 +4313,8 @@ void TIM3_IRQHandler(void)
 08002028 <I2C1_EV_IRQHandler>:
 
 /**
- * @brief This function handles I2C1 event interrupt.
- */
+  * @brief This function handles I2C1 event interrupt.
+  */
 void I2C1_EV_IRQHandler(void)
 {
  8002028:	b580      	push	{r7, lr}
@@ -4336,8 +4337,8 @@ void I2C1_EV_IRQHandler(void)
 0800203c <I2C1_ER_IRQHandler>:
 
 /**
- * @brief This function handles I2C1 error interrupt.
- */
+  * @brief This function handles I2C1 error interrupt.
+  */
 void I2C1_ER_IRQHandler(void)
 {
  800203c:	b580      	push	{r7, lr}
@@ -4360,8 +4361,8 @@ void I2C1_ER_IRQHandler(void)
 08002050 <USART1_IRQHandler>:
 
 /**
- * @brief This function handles USART1 global interrupt.
- */
+  * @brief This function handles USART1 global interrupt.
+  */
 void USART1_IRQHandler(void)
 {
  8002050:	b580      	push	{r7, lr}
@@ -4851,9 +4852,9 @@ void MX_TIM3_Init(void)
  80022aa:	4b22      	ldr	r3, [pc, #136]	; (8002334 <MX_TIM3_Init+0xac>)
  80022ac:	4a22      	ldr	r2, [pc, #136]	; (8002338 <MX_TIM3_Init+0xb0>)
  80022ae:	601a      	str	r2, [r3, #0]
-  htim3.Init.Prescaler = 899;
+  htim3.Init.Prescaler = 599;
  80022b0:	4b20      	ldr	r3, [pc, #128]	; (8002334 <MX_TIM3_Init+0xac>)
- 80022b2:	f240 3283 	movw	r2, #899	; 0x383
+ 80022b2:	f240 2257 	movw	r2, #599	; 0x257
  80022b6:	605a      	str	r2, [r3, #4]
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
  80022b8:	4b1e      	ldr	r3, [pc, #120]	; (8002334 <MX_TIM3_Init+0xac>)
