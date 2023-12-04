@@ -20,6 +20,12 @@
 <img src="./imgs/STLINK.png" width="50%">
 9. 若干杜邦线（公对母）+ 一块面包板 
 
+## 演示视频
+<video width="320*2" height="240*2" controls>
+  <source src="./video.mp4" type="video/mp4">
+</video>
+
+
 ## 功能
 
 1. 温湿度检测
